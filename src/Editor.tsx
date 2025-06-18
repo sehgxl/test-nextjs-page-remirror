@@ -1,4 +1,4 @@
-import { useRemirror } from "@remirror/react";
+import { OnChangeJSON, useRemirror } from "@remirror/react";
 import {
   BoldExtension,
   BulletListExtension,
@@ -16,8 +16,6 @@ export const CustomEditor = () => {
     ],
   });
 
-  console.log("rendered");
-
   return (
     <>
       <div
@@ -26,8 +24,9 @@ export const CustomEditor = () => {
         <Remirror
           classNames={["!h-96 border-black/40 border-2 !w-96"]}
           manager={manager}
+          autoRender={true}
         >
-          <EditorComponent />
+          <OnChangeJSON onChange={() => {}} />
         </Remirror>
       </div>
     </>
