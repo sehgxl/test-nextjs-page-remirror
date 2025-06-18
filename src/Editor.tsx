@@ -26,7 +26,6 @@ export const CustomEditor = () => {
         <Remirror
           classNames={["!h-96 border-black/40 border-2 !w-96"]}
           manager={manager}
-          autoRender={"end"}
         >
           <EditorComponent />
         </Remirror>
